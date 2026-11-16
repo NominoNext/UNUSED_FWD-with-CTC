@@ -1,0 +1,166 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>sync.ed homepage</title>
+
+        <link id="themeStylesheet" rel="stylesheet" href="style.css">
+
+        <meta name="viewport" content="width=device-width,initial-scale=0.50">
+    </head>
+
+    <body>
+        <header>
+            <pre>
+                                                                 ,---,
+                             ,---,                             ,---.'|
+   .--.--.               ,-+-. /  |                            |   | :
+  /  /    '       .--,  ,--.'|'   |   ,---.         ,---.      |   | |
+ |  :  /`./     /_ ./| |   |  ,"' |  /     \       /     \   ,--.__| |
+ |  :  ;_    , ' , ' : |   | /  | | /    / '      /    /  | /   ,'   |
+  \  \    `./___/ \: | |   | |  | |.    ' /      .    ' / |.   '  /  |
+   `----.   \.  \  ' | |   | |  |/ '   ; :__     '   ;   /|'   ; |:  |
+  /  /`--'  / \  ;   : |   | |--'  '   | '.'| ___'   |  / ||   | '/  '
+ '--'.     /   \  \  ; |   |/      |   :    :/  .\   :    ||   :    :|
+ `--'---'     :  \  \'---'        \   \  / \  ; \   \  /  \   \  /
+              \__'_;              `----'   `--" `----'    `----'
+            </pre>
+        </header>
+
+        <hr />
+
+        <div id="datetime"></div>
+
+        <script>
+            const now = new Date();
+        
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString();
+        
+            document.getElementById("datetime").innerHTML =
+                "sync.ed // Last login: " + date + "|" + time + " // connection: online";
+        </script>
+
+        <hr />
+        
+        <nav class="navbar">
+
+            <a href="index.html" class="nav-link">[SYNC]</a> |
+        
+            <a href="aboutus.html" class="nav-link">[About Us]</a> |
+        
+            <a href="products.html" class="nav-link">[Products]</a> |
+        
+            <a href="contactus.html" class="nav-link">[Contacts]</a>
+
+        </nav>
+
+        <hr />
+        
+        <section>
+
+            <article>
+                <p>user@sync.ed:~$ open SYNC.txt</p>
+
+                <p>
+                    SYSTEM MESSAGE: Welcome to SYNC.ed
+                    <br>
+                    Goal: Make life be in sync with our vision.
+                </p>
+            </article>
+
+            <hr />
+
+            <h2>> Introducing SYNC.ed and our mission.</h2>
+
+            <hr />
+                
+            <article>
+                <p>
+                    Statement: SYNC, an up and coming IoT company, hopes to bring to life connected experiences and ideas that everyday people, 
+                    creatives and working professionals would want to use and experience. 
+                    <br>
+                    <br>
+                    In the age of AI taking over the world, and contemporary tech companies slowing down not only innovation but also design. 
+                    SYNC hopes to bring a new age of tech with design thats not only exciting, but functional back in 2026. 
+                    <br>
+                    <br>
+                    Starting with 3 new products,
+                    <br>
+                    lets sync a vision of exploration and expression in the current world of today!
+            
+                </p>
+            
+                <br />
+                <br />
+                <br />
+
+            </article>
+
+            <hr /> 
+
+            <article>
+                <h3>### NEW ARRIVALS ###</h3>
+                
+                <hr /> 
+
+                <p>
+                    SYSTEM MESSAGE 2: New product arrivals
+                    <br>
+                    Codename: Palate, Pencil, CELL/BE
+                </p>
+
+                <div class="table-container">
+                
+                    <table style="width: 100%; min-width: 600px;">
+                        <tr>
+                            <th><img src="photos/5e43765f-f0fe-11e2-8c7c-d4ae52e62bcc.jpg.webp"></th>
+
+                            <th><img src="photos/images.png"></th>
+
+                            <th><img src="photos/images.jpeg" style="width:285px;height:285px;"></th>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <br />
+            </article>
+
+        </section>
+
+        <hr />
+
+        <hr />
+
+        <footer>
+            <p>Author: Mikael</p>
+            <p><a href="contactus.html">connect with us</a></p>
+            <p><a href="index.html" onclick="toggleTheme()">Get SYNC.ed again</a></p>
+            <p>Copyright &copy; 2026 SYNC.ed Inc</p>
+        </footer>
+
+        <script>
+            function toggleTheme() {
+                let theme = localStorage.getItem("theme");
+        
+                if (theme === "alternate") {
+                    localStorage.setItem("theme", "default");
+                } else {
+                    localStorage.setItem("theme", "alternate");
+                }
+            }
+        
+            let theme = localStorage.getItem("theme");
+        
+            if (theme === "alternate") {
+                document.getElementById("themeStylesheet").href = "style_alt.css";
+            } else {
+                document.getElementById("themeStylesheet").href = "style.css";
+            }
+        </script>
+
+    </body>
+    
+</html>
